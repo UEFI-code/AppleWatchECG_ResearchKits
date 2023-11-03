@@ -21,6 +21,9 @@
 @end
 
 @implementation ViewController
+
+-(BOOL)prefersStatusBarHidden { return YES; }
+
 - (IBAction)changedtxt:(id)sender {
     // save to user defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -42,8 +45,23 @@
     }];
 }
 
+- (IBAction)turnlight:(id)sender {
+    // hide all views
+    for (UIView *view in self.view.subviews) {
+        view.hidden = YES;
+    }
+}
+
+- (void)showall {
+    // show all views
+    for (UIView *view in self.view.subviews) {
+        view.hidden = NO;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
     // load default server url
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *srvurl = [defaults objectForKey:@"srvurl"];
@@ -58,6 +76,10 @@
 
     // set keyboard dismiss when click outside of textfield
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self.view action:@selector(endEditing:)]];
+    // add swipe gesture to show all views
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showall)];
+    swipe.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:swipe];
 }
 
 - (void)queryHeartBeatData {

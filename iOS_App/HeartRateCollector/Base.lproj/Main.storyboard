@@ -45,6 +45,15 @@
                                     <action selector="startecg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CK8-ev-BIv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmg-31-NGH">
+                                <rect key="frame" x="173" y="329" width="47" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="💡"/>
+                                <connections>
+                                    <action selector="turnlight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61y-oS-YQx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

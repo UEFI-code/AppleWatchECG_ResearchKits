@@ -21,10 +21,6 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>233333333333333</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>233333333333333</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
