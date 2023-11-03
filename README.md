@@ -12,4 +12,4 @@ This is an App that running on iPhone to collecting ECG Data From Apple Watch.
 # Not Work
 
 - During Screen Locked
-- Collect ECG Potencial Data
+- Collect ECG Potential Data
