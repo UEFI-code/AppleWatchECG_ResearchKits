@@ -6,6 +6,8 @@ This is an App that running on iPhone to collecting ECG Data From Apple Watch.
 
 - Collecting Heartbeat
 - Alive In Background
+- Send Json Data to Server
+- Screen Light Controlling
 
 # Not Work
 
